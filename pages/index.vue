@@ -1533,7 +1533,7 @@
           <article class="group">
             <div class="relative">
               <a href="javascript:void(0)" class="w-full aspect-[3/2] rounded-xl overflow-hidden block">
-                <img src="/img/thumbnail/thumbnail-1.jpg" alt="Thumbnail"
+                <img :src="noticia.capa" alt="Thumbnail"
                   class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]" />
               </a>
             </div>
