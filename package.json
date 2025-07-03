@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@directus/sdk": "^20.0.0",
+    "@directus/visual-editing": "^1.1.0",
     "@tailwindcss/vite": "^4.1.10",
     "axios": "^1.10.0",
     "nuxt": "^3.17.5",

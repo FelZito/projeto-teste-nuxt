@@ -1,160 +1,356 @@
 <template>
-  <!-- Navbar -->
-  <header class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent" role="banner"
-    aria-label="Navigation bar">
-    <div class="container">
-      <div class="ic-navbar-container relative -mx-5 flex items-center justify-between">
-        <div class="w-60 lg:w-56 max-w-full px-5">
-          <a href="." class="ic-navbar-logo block w-full py-5 text-primary-color">
-            <svg class="w-full fill-current" id="NavbarBrand" data-name="NavbarBrand" xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 500 118.11">
-              <path
-                d="M272.26,29.77h14.86V58q0,8.24,1.13,11.44a10,10,0,0,0,3.64,5,10.44,10.44,0,0,0,6.18,1.77,10.75,10.75,0,0,0,6.23-1.75,10.26,10.26,0,0,0,3.81-5.14q.92-2.52.91-10.82V29.77h14.7V54.59q0,15.33-2.42,21a23,23,0,0,1-8.72,10.58q-5.76,3.68-14.64,3.68-9.65,0-15.59-4.3a22.79,22.79,0,0,1-8.37-12q-1.73-5.32-1.72-19.37Z" />
-              <path
-                d="M338.36,29.77h14.69V36.5a25.29,25.29,0,0,1,8.38-6.19,24.53,24.53,0,0,1,10.05-2A18.63,18.63,0,0,1,381.39,31a19.46,19.46,0,0,1,7.11,7.86A23.64,23.64,0,0,1,397.09,31a23.34,23.34,0,0,1,11.12-2.69,20.65,20.65,0,0,1,11,2.9A16.79,16.79,0,0,1,426,38.76q2.08,4.68,2.08,15.24V88.34h-14.8V58.62q0-9.94-2.48-13.48t-7.43-3.52a11.22,11.22,0,0,0-6.75,2.15,12.66,12.66,0,0,0-4.44,5.95q-1.45,3.8-1.46,12.19V88.34h-14.8V60q0-7.86-1.16-11.38a10.27,10.27,0,0,0-3.48-5.25,9.15,9.15,0,0,0-5.61-1.72A11,11,0,0,0,359,43.8a13,13,0,0,0-4.48,6.1q-1.49,3.93-1.49,12.38V88.34H338.36Z" />
-              <path
-                d="M485.31,29.77H500V88.34H485.31V82.15A29,29,0,0,1,476.68,88a24.24,24.24,0,0,1-9.39,1.8q-11.34,0-19.62-8.8t-8.28-21.88q0-13.56,8-22.23a25.55,25.55,0,0,1,19.47-8.66,24.72,24.72,0,0,1,9.89,2,27.17,27.17,0,0,1,8.55,6ZM469.86,41.83a14.85,14.85,0,0,0-11.32,4.82A17.33,17.33,0,0,0,454,59a17.55,17.55,0,0,0,4.59,12.49,14.85,14.85,0,0,0,11.29,4.9,15.15,15.15,0,0,0,11.48-4.82Q486,66.76,486,59q0-7.65-4.56-12.38A15.31,15.31,0,0,0,469.86,41.83Z" />
-              <path
-                d="M28,29.77h14.7v6a35.37,35.37,0,0,1,9-5.87,22.09,22.09,0,0,1,8.31-1.64,20.09,20.09,0,0,1,14.78,6.08Q80,39.51,80,49.64v38.7H65.45V62.69q0-10.48-.94-13.92a9.57,9.57,0,0,0-3.27-5.25,9.18,9.18,0,0,0-5.78-1.8,10.82,10.82,0,0,0-7.65,3A16,16,0,0,0,43.38,53q-.65,2.74-.64,11.88v23.5H28Z" />
-              <path
-                d="M137.42,29.77h14.69V88.34H137.42V82.15A29,29,0,0,1,128.79,88a24.19,24.19,0,0,1-9.38,1.8q-11.34,0-19.63-8.8T91.5,59.16q0-13.56,8-22.23A25.53,25.53,0,0,1,119,28.27a24.69,24.69,0,0,1,9.89,2,27.17,27.17,0,0,1,8.55,6ZM122,41.83a14.87,14.87,0,0,0-11.32,4.82A17.37,17.37,0,0,0,106.15,59a17.54,17.54,0,0,0,4.58,12.49A14.85,14.85,0,0,0,122,76.39a15.12,15.12,0,0,0,11.48-4.82q4.56-4.81,4.56-12.62,0-7.65-4.56-12.38A15.3,15.3,0,0,0,122,41.83Z" />
-              <rect y="29.77" width="14.69" height="58.56" />
-              <polygon
-                points="226.39 62.27 232.8 68.67 282.23 118.11 163.48 89.2 196.84 55.84 190.43 49.44 140.99 0 259.75 28.91 226.39 62.27"
-                id="NavbarBrandIcon" />
-            </svg>
-          </a>
-        </div>
-        <div class="flex w-full items-center justify-between px-5">
-          <div>
-            <button type="button"
-              class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
-              data-web-toggle="navbar-collapse" data-web-target="navbarMenu" aria-expanded="false"
-              aria-label="Toggle navigation menu">
-              <i class="lni lni-menu"></i>
-            </button>
-
-            <nav id="navbarMenu"
-              class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
-              <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
-                <li class="group relative">
-                  <a href="#home"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active"
-                    role="menuitem">Home</a>
-                </li>
-
-                <li class="group relative">
-                  <a href="#services"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Services</a>
-                </li>
-
-                <li class="group relative">
-                  <a href="#portfolio"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Portfolio</a>
-                </li>
-
-                <li class="group relative">
-                  <a href="#pricing"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Pricing</a>
-                </li>
-
-                <li class="group relative">
-                  <a href="#team"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Team</a>
-                </li>
-
-                <li class="group relative">
-                  <a href="#contact"
-                    class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                    role="menuitem">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="flex items-center justify-end pr-[52px] lg:pr-0">
-            <button type="button" class="inline-flex items-center text-primary-color text-[24px]/none"
-              aria-label="Switch theme" data-web-trigger="web-theme"></button>
-            <div class="hidden sm:flex">
-              <a href="javascript:void(0)"
-                class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
-                role="button">Get Started</a>
+  <div>
+    <header class="th-header header-layout1">
+      <div class="sticky-wrapper">
+        <!-- Main Menu Area -->
+        <div class="menu-area">
+          <div class="container th-container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto">
+                <div class="header-logo">
+                  <a href="/">
+                    <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.logo}`" alt="{{ prefeitura.nome }}" width="200" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto me-xxl-auto">
+                <nav class="main-menu d-none d-xl-inline-block">
+                  <ul>
+                    <li class="menu-item-has-children mega-menu-wrap">
+                      <a class="active" href="index.html">Home</a>
+                      <ul class="mega-menu mega-menu-content allow-natural-scroll">
+                        <li>
+                          <div class="container">
+                            <div class="row gy-4">
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/home-consulting.jpg" alt="Home One">
+                                    <div class="btn-wrap">
+                                      <a href="index.html" class="th-btn">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-consulting.html"><span>01.</span>Home
+                                      Consulting</a></h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/home-cloud.jpg" alt="Home Two">
+                                    <div class="btn-wrap">
+                                      <a href="home-cloud.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-cloud.html"><span>02.</span>Home Cloud</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/home-ai.jpg" alt="Home Three">
+                                    <div class="btn-wrap">
+                                      <a href="home-ai-machine.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-ai-machine.html"><span>03.</span>Home
+                                      Ai-Machine</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/startup.jpg" alt="Home Four">
+                                    <div class="btn-wrap">
+                                      <a href="home-startup.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-startup.html"><span>04.</span>Home
+                                      Startup</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/home-cybersecurity.jpg" alt="Home Five">
+                                    <div class="btn-wrap">
+                                      <a href="home-cybersecurity.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-cybersecurity.html"><span>05.</span>Home
+                                      Cybersecurity</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/home-sass.jpg" alt="Home Six">
+                                    <div class="btn-wrap">
+                                      <a href="home-sass.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-sass.html"><span>06.</span>SaaS Business
+                                      Product</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/home-tech-support.jpg" alt="Home Seven">
+                                    <div class="btn-wrap">
+                                      <a href="home-tech-support.html" class="th-btn ">View
+                                        Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-tech-support.html"><span>07.</span>Tech
+                                      Support Services</a></h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/software-deve.jpg" alt="Home Eight">
+                                    <div class="btn-wrap">
+                                      <a href="home-software-development.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a
+                                      href="home-software-development.html"><span>08.</span>Home
+                                      Software-Development</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/app-development.jpg" alt="Home Nine">
+                                    <div class="btn-wrap">
+                                      <a href="home-app-development.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-app-development.html"><span>09.</span>Web &
+                                      App Development</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/it-solutions.jpg" alt="Home Ten">
+                                    <div class="btn-wrap">
+                                      <a href="home-it-solutions.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-it-solutions.html"><span>10.</span>Home It
+                                      Solutions</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/digital-transformation.jpg" alt="Home Eleven">
+                                    <div class="btn-wrap">
+                                      <a href="home-digital-transformation.html" class="th-btn">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a
+                                      href="home-digital-transformation.html"><span>11.</span>Home Digital
+                                      Transformation</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/data-analytics.jpg" alt="Home Twelf">
+                                    <div class="btn-wrap">
+                                      <a href="home-data-analytics.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a href="home-data-analytics.html"><span>12.</span>Home
+                                      Data Analytics & Big</a>
+                                  </h3>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mega-menu-box">
+                                  <div class="mega-menu-img">
+                                    <img src="/assets/img/pages/blockchain-fintech.jpg" alt="Home ten">
+                                    <div class="btn-wrap">
+                                      <a href="home-blockchain-fintech.html" class="th-btn ">View Demo</a>
+                                    </div>
+                                  </div>
+                                  <h3 class="mega-menu-title"><a
+                                      href="home-blockchain-fintech.html"><span>13.</span>Home
+                                      Blockchain & Fintech</a>
+                                  </h3>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">About Us</a>
+                      <ul class="sub-menu">
+                        <li><a href="about.html">About Us 1</a></li>
+                        <li><a href="about2.html">About Us 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Pages</a>
+                      <ul class="sub-menu">
+                        <li class="menu-item-has-children">
+                          <a href="#">Shop</a>
+                          <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-details.html">Shop Details</a></li>
+                            <li><a href="cart.html">Cart Page</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="case-study.html">Case Study</a></li>
+                        <li><a href="case-study-details.html">Case Study Details</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="career-details.html">Career Details</a></li>
+                        <li><a href="team-guide.html">Team</a></li>
+                        <li><a href="team-guider-details.html">Team Details</a></li>
+                        <li><a href="faq.html">Faq Page</a></li>
+                        <li><a href="price.html">Price Package</a></li>
+                        <li><a href="error.html">Error Page</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Our Services</a>
+                      <ul class="sub-menu">
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="service-details.html">Service Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Projects</a>
+                      <ul class="sub-menu">
+                        <li><a href="project-grid.html">Project Grid</a></li>
+                        <li><a href="project-details.html">Project Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Blog</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="blog-grid.html">Blog Grid</a></li>
+                        <li><a href="blog-details.html">Blog Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="contact.html">Contact us</a>
+                      <ul class="sub-menu">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact-2.html">Contact Us Two</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+                <button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button>
+              </div>
+              <div class="col-auto d-none d-xl-block">
+                <div class="header-button">
+                  <button type="button" class="icon-btn searchBoxToggler">
+                    <img src="/assets/img/icon/search.svg" alt="icon">
+                  </button>
+                  <a href="contact.html" class="th-btn th-icon">Get In Touch <i
+                      class="fa-light fa-arrow-right-long"></i></a>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="logo-bg" data-mask-src="/assets/img/logo_bg_mask.png"></div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Main content -->
-  <main class="flex-1">
-    <slot />
-  </main>
-
-
+    <NuxtPage />
+  </div>
 </template>
 
-<script setup lang="ts">
-import { onMounted } from 'vue'
+<script setup>
+import { useHead } from '#imports'
+import { ref, onMounted, nextTick } from 'vue'
+import axios from 'axios'
 
-onMounted(() => {
-  // Scroll Reveal
-      const sr = ScrollReveal({
-        origin: "bottom",
-        distance: "16px",
-        duration: 1000,
-        reset: false,
-      });
+const prefeitura = ref([])
 
-      sr.reveal(`.scroll-revealed`, {
-        cleanup: true,
-      });
+onMounted(async () => {
+  try {
+    const res = await axios.get('/api/entidade')
 
-      // GLightBox
-      GLightbox({
-        selector: ".video-popup",
-        href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
-        type: "video",
-        source: "youtube",
-        width: 900,
-        autoplayVideos: true,
-      });
+    prefeitura.value = Array.isArray(res.data) ? res.data[0] : res.data
 
-      const myGallery3 = GLightbox({
-        selector: ".portfolio-box",
-        type: "image",
-        width: 900,
-      });
+    console.log('Prefeitura:', prefeitura.value)
 
-      // Testimonial
-      const testimonialSwiper = new Swiper(".testimonial-carousel", {
-        slidesPerView: 1,
-        spaceBetween: 30,
+    await nextTick()
+    await apply({ directusUrl: 'https://directus.i9sellz.com.br/' })
+  } catch (e) {
+    console.error(e)
+  }
+})
+useHead({
+  title: 'Atek - It Business and Consulting Service',
+  meta: [
+    { name: 'author', content: 'Atek' },
+    { name: 'description', content: 'Atek - It Business and Consulting Service Html Template' },
+    { name: 'keywords', content: 'Atek - It Business and Consulting Service Html Template' },
+    { name: 'robots', content: 'INDEX,FOLLOW' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+    { name: 'theme-color', content: '#ffffff' }
+  ],
+  link: [
+    // Favicons
+    { rel: 'manifest', href: '/assets/img/favicons/manifest.json' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/img/favicons/apple-icon-180x180.png' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/img/favicons/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/img/favicons/favicon-16x16.png' },
 
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+    // Google Fonts
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Plus+Jakarta+Sans:wght@200..800&display=swap'
+    },
 
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1280: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-      });
-  
+    // CSS files
+    { rel: 'stylesheet', href: '/assets/css/bootstrap.min.css' },
+    { rel: 'stylesheet', href: '/assets/css/fontawesome.min.css' },
+    { rel: 'stylesheet', href: '/assets/css/magnific-popup.min.css' },
+    { rel: 'stylesheet', href: '/assets/css/swiper-bundle.min.css' },
+    { rel: 'stylesheet', href: '/assets/css/style.css' }
+  ],
+  script: [
+    { src: '/assets/js/vendor/jquery-3.7.1.min.js', body: true },
+    { src: '/assets/js/swiper-bundle.min.js', body: true },
+    { src: '/assets/js/bootstrap.min.js', body: true },
+    { src: '/assets/js/jquery.magnific-popup.min.js', body: true },
+    { src: '/assets/js/jquery.counterup.min.js', body: true },
+    { src: '/assets/js/circle-progress.js', body: true },
+    { src: '/assets/js/jquery-ui.min.js', body: true },
+    { src: '/assets/js/imagesloaded.pkgd.min.js', body: true },
+    { src: '/assets/js/isotope.pkgd.min.js', body: true },
+    { src: '/assets/js/nice-select.min.js', body: true },
+    { src: '/assets/js/wow.min.js', body: true },
+    { src: '/assets/js/gsap.min.js', body: true },
+    { src: '/assets/js/ScrollTrigger.min.js', body: true },
+    { src: '/assets/js/SplitText.js', body: true },
+    { src: '/assets/js/lenis.min.js', body: true },
+    { src: '/assets/js/main.js', body: true }
+  ]
 })
 
 

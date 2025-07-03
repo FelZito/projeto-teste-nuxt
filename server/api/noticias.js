@@ -10,4 +10,4 @@ export default defineEventHandler(async (event) => {
 
   const data = await res.json();
   return data.data;
-});
+});                                         
