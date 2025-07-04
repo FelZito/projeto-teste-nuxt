@@ -137,7 +137,7 @@
                   </div>
                   <h3 class="box-title">
                     <a href="blog-details.html" class="noticia-titulo"
-                      :data-directus="setAttr({ collection: 'noticias', item: noticia.id, fields: ['titulo', 'capa'], mode: 'popover' })">{{
+                      :data-directus="setAttr({ collection: 'noticias', item: noticia.id, fields: ['titulo', 'imagem'], mode: 'popover' })">{{
                         noticia.titulo }}</a>
                   </h3>
                   <a href="blog-details.html" class="th-btn style4 th-radius th-icon">Ler mais
