@@ -17,7 +17,7 @@
                 <nav class="main-menu d-none d-xl-inline-block">
                   <ul>
                     <li class="menu-item-has-children mega-menu-wrap">
-                      <a class="active" href="index.html">Home</a>
+                      <a class="active" href="index.html">Institucional</a>
                       <ul class="mega-menu mega-menu-content allow-natural-scroll">
                         <li>
                           <div class="container">
@@ -198,14 +198,14 @@
                       </ul>
                     </li>
                     <li class="menu-item-has-children">
-                      <a href="#">About Us</a>
+                      <a href="#">Secretarias</a>
                       <ul class="sub-menu">
                         <li><a href="about.html">About Us 1</a></li>
                         <li><a href="about2.html">About Us 2</a></li>
                       </ul>
                     </li>
                     <li class="menu-item-has-children">
-                      <a href="#">Pages</a>
+                      <a href="#">Transparência</a>
                       <ul class="sub-menu">
                         <li class="menu-item-has-children">
                           <a href="#">Shop</a>
@@ -230,34 +230,20 @@
                       </ul>
                     </li>
                     <li class="menu-item-has-children">
-                      <a href="#">Our Services</a>
+                      <a href="#">Notícias</a>
                       <ul class="sub-menu">
                         <li><a href="service.html">Services</a></li>
                         <li><a href="service-details.html">Service Details</a></li>
                       </ul>
                     </li>
                     <li class="menu-item-has-children">
-                      <a href="#">Projects</a>
+                      <a href="#">Acesso à informação</a>
                       <ul class="sub-menu">
                         <li><a href="project-grid.html">Project Grid</a></li>
                         <li><a href="project-details.html">Project Details</a></li>
                       </ul>
                     </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Blog</a>
-                      <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="contact.html">Contact us</a>
-                      <ul class="sub-menu">
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="contact-2.html">Contact Us Two</a></li>
-                      </ul>
-                    </li>
+
                   </ul>
                 </nav>
                 <button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button>
@@ -267,8 +253,6 @@
                   <button type="button" class="icon-btn searchBoxToggler">
                     <img src="/assets/img/icon/search.svg" alt="icon">
                   </button>
-                  <a href="contact.html" class="th-btn th-icon">Get In Touch <i
-                      class="fa-light fa-arrow-right-long"></i></a>
                 </div>
               </div>
             </div>

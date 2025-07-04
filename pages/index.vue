@@ -1,134 +1,72 @@
 <template>
-
-  <div class="hero-9" id="hero">
-    <div class="slider-wrap">
-      <div class="swiper th-slider" id="heroSlider9"
-        data-slider-options='{"effect":"fade","paginationType":"fraction","breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"1"},"1200":{"slidesPerView":"1"},"1300":{"slidesPerView":"1"}}}'>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="hero-inner">
-              <div class="th-hero-bg" data-bg-src="/assets/img/hero/hero_9_1.jpg">
-              </div>
-              <div class="container">
-                <div class="hero-style9">
-                  <span class="sub-title text-white" data-ani="slideinup" data-ani-delay="0.2s">Design.
-                    Develop. Deliver.</span>
-                  <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.3s">
-                    Your Digital Transformation Starts Here
-                  </h1>
-                  <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                    <a href="contact.html" class="th-btn style3 th-icon">
-                      Get Started <i class="fa-light fa-arrow-right-long"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+  <div class="th-hero-wrapper hero-1" id="hero">
+    <div class="swiper th-slider hero-slider-1" id="heroSlide1"
+      data-slider-options='{"effect":"fade","menu": ["", "", ""],"heroSlide1": {"swiper-container": {"pagination": {"el": ".swiper-pagination", "clickable": true }}}}'>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="hero-inner">
+            <div class="th-hero-bg" data-bg-src="/assets/img/hero/hero-1.png">
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-inner">
-              <div class="th-hero-bg" data-bg-src="/assets/img/hero/hero_9_2.jpg">
-              </div>
-              <div class="container">
-                <div class="hero-style9">
-                  <span class="sub-title text-white" data-ani="slideinup" data-ani-delay="0.2s">Design.
-                    Develop. Deliver.</span>
-                  <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">
-                    Your Vision, Our Web And App Mastery
-                  </h1>
-                  <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                    <a href="contact.html" class="th-btn style3 th-icon">
-                      Get Started <i class="fa-light fa-arrow-right-long"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="hero-1-shape d-none d-lg-block" data-ani="slideinleft" data-ani-delay="0.4s">
+              <img src="/assets/img/hero/hero-1.png" alt="hero-shape" style="height: 802px; width: 1920px;">
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-inner">
-              <div class="th-hero-bg" data-bg-src="/assets/img/hero/hero_9_3.jpg">
-              </div>
-              <div class="container">
-                <div class="hero-style9">
-                  <span class="sub-title text-white" data-ani="slideinup" data-ani-delay="0.2s">Design.
-                    Develop. Deliver.</span>
-                  <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">
-                    Your Vision, Our Web And App Mastery
-                  </h1>
-                  <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-                    <a href="contact.html" class="th-btn style3 th-icon">
-                      Get Started <i class="fa-light fa-arrow-right-long"></i>
-                    </a>
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-9 col-lg-8">
+                  <div class="hero-style1">
+                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
+                      Prefeitura de Santa Inês lança projeto de pesquisa</h1>
+                    <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">As inscrições iniciam na próxima sexta-feira.</p>
+                    <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                      <a href="contact.html" class="th-btn style7 th-icon">
+                        Ler mais <i class="fa-light fa-arrow-right-long"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="slider-controller">
-        <button data-slider-prev="#heroSlider9" class="hero-arrow slider-prev"><img
-            src="/assets/img/icon/hero-arrow-left.svg" alt=""></button>
-        <div class="slider-pagination" data-slider-id="#heroSlider9"></div>
-        <button data-slider-next="#heroSlider9" class="hero-arrow slider-next"><img
-            src="/assets/img/icon/hero-arrow-right.svg" alt=""></button>
-      </div>
-    </div>
-
-    <div class="hero9-wrapp">
-      <div class="container">
-        <div class="row gx-0">
-          <div class="col-lg-9">
-            <div class="hero-9-marquee smoke-bg">
-              <div class="marquee-section overflow-hidden">
-                <div class="marquee-wrapper">
-                  <div class="marquee">
-                    <div class="marquee-group">
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Welcome to Innovate Tech
-                        Solutions</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Web Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">App Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Architect</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Welcome to Innovate Tech
-                        Solutions</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Web Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">App Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Architect</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Welcome to Innovate Tech
-                        Solutions</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Web Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">App Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Architect</div>
-
-                    </div>
-                    <div aria-hidden="true" class="marquee-group">
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Welcome to Innovate Tech
-                        Solutions</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Web Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">App Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Architect</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Welcome to Innovate Tech
-                        Solutions</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Web Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">App Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Architect</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Welcome to Innovate Tech
-                        Solutions</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Web Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">App Development</div>
-                      <div class="text"><img src="/assets/img/icon/marquee-icon.svg" alt="">Architect</div>
+        <div class="swiper-slide">
+          <div class="hero-inner">
+            <div class="th-hero-bg" data-bg-src="/assets/img/hero/hero-2.png/">
+            </div>
+            <div class="hero-1-shape d-none d-lg-block" data-ani="slideinleft" data-ani-delay="0.4s">
+              <img src="/assets/img/hero/hero-2.png" alt="hero-shape" style="height: 802px; width: 1920px;">
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-9 col-lg-8">
+                  <div class="hero-style1">
+                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
+                      Secretaria de Meio ambiente realiza mutirão de limpeza na praia.</h1>
+                    <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Agentes de limpeza operam em toda a orla da cidade.</p>
+                    <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                      <a href="contact.html" class="th-btn style7 th-icon">
+                        Ler mais <i class="fa-light fa-arrow-right-long"></i>
+                      </a>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
+
+      <div class="th-swiper-custom">
+        <button data-slider-prev="#heroSlide1" class="slider-arrow slider-prev"><img
+            src="/assets/img/icon/right-arrow.svg" alt=""></button>
+        <div class="slider-pagination"></div>
+        <button data-slider-next="#heroSlide1" class="slider-arrow slider-next"><img
+            src="/assets/img/icon/left-arrow.svg" alt=""></button>
+      </div>
+
     </div>
   </div>
+
 
   <!-- Secretarias -->
   <section class="project-area position-relative overflow-hidden space" id="project-sec">
