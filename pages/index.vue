@@ -126,7 +126,7 @@
           data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="noticia in noticias" :key="noticia.id">
-              <div class="blog-box th-ani">
+              <div class="blog-box th-ani" :data-directus="setAttr({ collection: 'noticias', item: noticia.id, fields: ['titulo', 'imagem'], mode: 'popover' })">
                 <div class="blog-img global-img">
                   <img :src="`https://directus.i9sellz.com.br/assets/${noticia.imagem}`" alt="blog image" />
                 </div>
@@ -136,9 +136,8 @@
                     <a href="blog.html">{{ noticia.tempo_leitura }}</a>
                   </div>
                   <h3 class="box-title">
-                    <a href="blog-details.html" class="noticia-titulo"
-                      :data-directus="setAttr({ collection: 'noticias', item: noticia.id, fields: ['titulo', 'imagem'], mode: 'popover' })">{{
-                        noticia.titulo }}</a>
+                    <a href="blog-details.html" class="noticia-titulo">
+                      {{ noticia.titulo }}</a>
                   </h3>
                   <a href="blog-details.html" class="th-btn style4 th-radius th-icon">Ler mais
                     <i class="fa-light fa-arrow-right-long"></i>
