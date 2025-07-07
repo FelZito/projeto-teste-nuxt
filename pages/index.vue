@@ -155,6 +155,7 @@
 
   </section>
 
+  <!-- Prefeitura -->
   <div class="about-area space-bottom mt-4">
     <div class="container">
       <div class="row justify-content-center">
@@ -170,19 +171,20 @@
         <!-- Imagem do Prefeito -->
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_prefeito}`" :alt="prefeitura.prefeito"
-            style="border-radius: 12px;" class="w-100 mb-3" />
+            class="img-prefeito mb-3" />
           <h3 class="box-title text-anime-style-2">{{ prefeitura.prefeito }}</h3>
         </div>
 
         <!-- Imagem do Vice-Prefeito -->
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_vice_prefeito}`"
-            :alt="prefeitura.vice_prefeito" style=" border-radius: 12px;" class="w-100 mb-3" />
+            :alt="prefeitura.vice_prefeito" class="img-prefeito mb-3" />
           <h3 class="box-title text-anime-style-2">{{ prefeitura.vice_prefeito }}</h3>
         </div>
       </div>
     </div>
   </div>
+
 
 
 
@@ -568,4 +570,15 @@ onMounted(() => {
 .card-service-item {
   height: 150px;
 }
+
+.img-prefeito {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
