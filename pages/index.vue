@@ -70,6 +70,36 @@
     </div>
   </div>
 
+
+  <div class="service-area bg-top-center position-relative space overflow-hidden" id="service-sec"
+    data-bg-src="assets/img/bg/line-pattern2.png">
+    <div class="container">
+      <div class="row">
+        <div class="service-list-area">
+          <div class="service-list-wrap sv-list2" v-for="(noticia, index) in noticias" :key="noticia.id">
+            <div class="service-list" :class="{ active: index === 0 }" :style="{
+              backgroundImage: `url(https://directus.i9sellz.com.br/assets/${noticia.imagem})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }">
+              <div class="service-content">
+                <h4 class="box-title">
+                  <a href="service-details.html">{{ noticia.titulo }}</a>
+                </h4>
+              </div>
+              <a href="service-details.html" class="th-btn style2">
+                Ler mais <i class="fa-light fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <!-- Blog section -->
   <section class="overflow-hidden space bg-smoke" id="blog-sec">
     <div class="container">
@@ -125,7 +155,7 @@
 
   </section>
 
-  <div class="about-area space-bottom space-bottom mt-4">
+  <div class="about-area space-bottom mt-4">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -134,41 +164,27 @@
           </div>
         </div>
       </div>
-      <div class="row gy-30 mb-60 align-items-center">
+
+      <!-- Imagens lado a lado -->
+      <div class="row gy-4 align-items-center text-center">
+        <!-- Imagem do Prefeito -->
         <div class="col-lg-6">
-          <div class="about-image ab-img16 global-img">
-            <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_prefeito}`"
-              alt="{{ prefeitura.foto_prefeito }}" style="height: 543px;" />
-          </div>
+          <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_prefeito}`" :alt="prefeitura.prefeito"
+            style="border-radius: 12px;" class="w-100 mb-3" />
+          <h3 class="box-title text-anime-style-2">{{ prefeitura.prefeito }}</h3>
         </div>
+
+        <!-- Imagem do Vice-Prefeito -->
         <div class="col-lg-6">
-          <div class="about-item style-16 ps-xxl-4 ms-xxl-4">
-            <div class="about-content">
-              <h3 class="box-title text-anime-style-2 mt-3"><a href="about-details.html">{{ prefeitura.prefeito }}</a>
-              </h3>
-              <p class="about-text wow fadeInUp" data-wow-delay=".3s">{{ prefeitura.descricao_prefeito }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row gy-30 align-items-center">
-        <div class="col-lg-6">
-          <div class="about-image ab-img16 global-img">
-            <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_vice_prefeito}`"
-              alt="{{ prefeitura.foto_prefeito }}" style="height: 543px;" />
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="about-item style-16 ps-xxl-4 ms-xxl-4">
-            <div class="about-content">
-              <h3 class="box-title text-anime-style-2"><a href="about-details.html">{{ prefeitura.vice_prefeito }}</a></h3>
-              <p class="about-text wow fadeInUp">{{ prefeitura.descricao_vice_prefeito }}</p>
-            </div>
-          </div>
+          <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_vice_prefeito}`"
+            :alt="prefeitura.vice_prefeito" style=" border-radius: 12px;" class="w-100 mb-3" />
+          <h3 class="box-title text-anime-style-2">{{ prefeitura.vice_prefeito }}</h3>
         </div>
       </div>
     </div>
   </div>
+
+
 
   <!-- Secretarias -->
   <section class="project-area position-relative project-overlay overflow-hidden bg-top-center space">
@@ -205,6 +221,102 @@
     </div>
 
   </section>
+
+
+  <!-- Serviços -->
+  <div class="container my-5">
+    <div class="title-area text-center">
+      <h2 class="sec-title mb-20 text-anime-style-3">Serviços e Informações</h2>
+    </div>
+
+    <div class="slider-area mt-4 position-relative">
+      <div class="swiper th-slider" id="serviceSlider7"
+        data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4},"1300":{"slidesPerView":5}}}'>
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide card-service-item">
+            <div class="service-card-modern">
+              <div class="icon-box">📂</div>
+              <h3><a href="service.html">Portal do Servidor</a></h3>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide card-service-item">
+            <div class="service-card-modern">
+              <div class="icon-box">📊</div>
+              <h3><a href="service.html">Execução Orçamentária e Financeira</a></h3>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide card-service-item">
+            <div class="service-card-modern">
+              <div class="icon-box">💰</div>
+              <h3><a href="service.html">Folha de Pagamento</a></h3>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide card-service-item">
+            <div class="service-card-modern">
+              <div class="icon-box">🏛️</div>
+              <h3><a href="service.html">Sistema Tributário</a></h3>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide card-service-item">
+            <div class="service-card-modern">
+              <div class="icon-box">📑</div>
+              <h3><a href="service.html">Licitações</a></h3>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="swiper-slide card-service-item">
+            <div class="service-card-modern">
+              <div class="icon-box">📬</div>
+              <h3><a href="service.html">E-SIC</a></h3>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Setas -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <section class="slider-area space-top">
+    <div class="swiper mySlider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://painel.siganet.net.br/upload/0000021958/cms/images/thumbs/1140x150_65fc7b3a68450df80249b8af68d38d9f.png"
+            alt="Banner 1" class="w-100" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://painel.siganet.net.br/upload/0000000399/cms/images/thumbs/1140x150_547d19f690d8159ae2658443ddb670dd.png"
+            alt="Banner 2" class="w-100" />
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination (opcional) -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
 
 
   <!-- <section class="team-area3 position-relative bg-top-center space" data-bg-src="/assets/img/bg/team_bg_2.jpg">
@@ -328,4 +440,132 @@ onMounted(async () => {
     console.error(e)
   }
 })
+
+onMounted(() => {
+  try {
+    new Swiper('.mySlider', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    })
+  } catch (err) {
+    console.error('Erro ao iniciar swiper:', err)
+  }
+})
+
+
 </script>
+
+<style scoped>
+.slider-area {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Alinha as setas verticalmente ao centro */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Esconde texto da seta padrão (acessibilidade) */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Animação ao passar o mouse */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Reposicionamento das setas */
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Paginação opcional customizada */
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007aff;
+  opacity: 1;
+}
+
+.service-card-modern {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.service-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-modern .icon-box {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.service-card-modern h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.service-card-modern a {
+  color: #333;
+  text-decoration: none;
+}
+
+.service-card-modern a:hover {
+  color: #007bff;
+}
+
+.card-service-item {
+  height: 150px;
+}
+</style>
