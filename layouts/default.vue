@@ -265,17 +265,20 @@
     <NuxtPage />
 
     <div class="space-bottom space-top">
-        <div class="container">
-            <div class="contact-map style2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sAngfuztheme!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
-                <div class="contact-icon">
-                    <img src="/assets/img/icon/location-dot3.svg" alt="">
-                </div>
-            </div>
+      <div class="container">
+        <div class="contact-map style2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sAngfuztheme!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd"
+            allowfullscreen="" loading="lazy"></iframe>
+          <div class="contact-icon">
+            <img src="/assets/img/icon/location-dot3.svg" alt="">
+          </div>
         </div>
+      </div>
     </div>
 
-    <footer class="footer-wrapper bg-title footer-layout2 footer-layout5 space-top" style="background-color: #0B59DB !important;">
+    <footer class="footer-wrapper bg-title footer-layout2 footer-layout5 space-top"
+      style="background-color: #0B59DB !important;">
       <div class="widget-area">
         <div class="container">
           <div class="row justify-content-between">
@@ -283,8 +286,8 @@
               <div class="widget footer-widget">
                 <div class="th-widget-about">
                   <div class="about-logo">
-                    <a href="index.html"><img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.logo}`" alt="{{ prefeitura.nome }}"
-                      width="200" /></a>
+                    <a href="index.html"><img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.logo}`"
+                        alt="{{ prefeitura.nome }}" width="200" /></a>
                   </div>
                   <div class="th-social">
                     <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
@@ -369,26 +372,55 @@
 </template>
 
 <script setup>
+import { ref, onMounted, nextTick, watchEffect } from 'vue'
 import { useHead } from '#imports'
-import { ref, onMounted, nextTick } from 'vue'
 import axios from 'axios'
 
 const prefeitura = ref([])
+const tema = ref({})
+const corPrincipal = ref('#C0C0C0') // Valor padrão
 
 onMounted(async () => {
   try {
     const res = await axios.get('/api/entidade')
-
     prefeitura.value = Array.isArray(res.data) ? res.data[0] : res.data
-
     console.log('Prefeitura:', prefeitura.value)
-
     await nextTick()
-    await apply({ directusUrl: 'https://directus.i9sellz.com.br/' })
   } catch (e) {
-    console.error(e)
+    console.error('Erro ao buscar entidade:', e)
+  }
+
+  try {
+    const res = await axios.get('/api/tema')
+    tema.value = Array.isArray(res.data) ? res.data[0] : res.data
+    console.log('Tema:', tema.value)
+    if (tema.value?.cor_principal) {
+      corPrincipal.value = tema.value.cor_principal
+    }
+  } catch (e) {
+    console.error('Erro ao buscar tema:', e)
   }
 })
+
+// Atualiza o <head> dinamicamente com a cor quando `corPrincipal` mudar
+watchEffect(() => {
+  useHead({
+    style: [
+      {
+        children: `
+          :root {
+            --theme-color: ${corPrincipal.value};
+            --primary-color: ${corPrincipal.value};
+          }
+        `,
+        type: 'text/css',
+        id: 'theme-vars'
+      }
+    ]
+  })
+})
+
+// Cabeçalho inicial (resto do conteúdo)
 useHead({
   title: 'Atek - It Business and Consulting Service',
   meta: [
@@ -400,24 +432,19 @@ useHead({
     { name: 'theme-color', content: '#ffffff' }
   ],
   link: [
-    // Favicons
     { rel: 'manifest', href: '/assets/img/favicons/manifest.json' },
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/img/favicons/apple-icon-180x180.png' },
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/img/favicons/favicon-32x32.png' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/img/favicons/favicon-16x16.png' },
-
-    // Google Fonts
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Plus+Jakarta+Sans:wght@200..800&display=swap'
     },
-
-    // CSS files
     { rel: 'stylesheet', href: '/assets/css/bootstrap.min.css' },
     { rel: 'stylesheet', href: '/assets/css/fontawesome.min.css' },
     { rel: 'stylesheet', href: '/assets/css/magnific-popup.min.css' },
     { rel: 'stylesheet', href: '/assets/css/swiper-bundle.min.css' },
-    { rel: 'stylesheet', href: '/assets/css/style.css' },
+    { rel: 'stylesheet', href: '/assets/css/style.css' }
   ],
   script: [
     { src: '/assets/js/vendor/jquery-3.7.1.min.js', body: true },
@@ -438,6 +465,4 @@ useHead({
     { src: '/assets/js/main.js', body: true }
   ]
 })
-
-
 </script>
