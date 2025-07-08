@@ -1,6 +1,6 @@
 <template>
 
-  <div class="breadcumb-wrapper " data-bg-src="/assets/img/bg/breadcumb-bg.jpg">
+  <div class="breadcumb-wrapper " style="background-color: var(--theme-color);">
     <div class="container">
       <div class="breadcumb-content">
         <h1 class="breadcumb-title">Últimas notícias</h1>
@@ -25,9 +25,11 @@
                 <div class="blog-meta">
                   <a class="author" href="blog.html">July 05, 2025</a>
                 </div>
-                <h3 class="box-title"><a href="blog-details.html"
-                    :data-directus="setAttr({ collection: 'noticias', item: noticia.id, fields: ['titulo', 'capa'], mode: 'popover' })">{{
-                    noticia.titulo }}</a>
+                <h3 class="box-title">
+                  <NuxtLink :to="`/noticias/${noticia.slug}`"
+                    :data-directus="setAttr({ collection: 'noticias', item: noticia.id, fields: ['titulo', 'capa'], mode: 'popover' })">
+                    {{ noticia.titulo }}
+                  </NuxtLink>
                 </h3>
                 <a href="blog-details.html" class="th-btn style4 th-icon mb-10">Ler mais <i
                     class="fa-light fa-arrow-right-long"></i></a>
@@ -45,6 +47,7 @@
 import { ref, onMounted, nextTick } from 'vue'
 import axios from 'axios'
 import { apply, setAttr } from '@directus/visual-editing'
+import { NuxtLink } from '#components'
 
 const noticias = ref([])
 

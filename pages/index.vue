@@ -76,8 +76,8 @@
     <div class="container">
       <div class="row">
         <div class="service-list-area">
-          <div class="service-list-wrap sv-list2" v-for="(noticia, index) in noticias" :key="noticia.id">
-            <div class="service-list" :class="{ active: index === 0 }" :style="{
+          <div class="service-list-wrap sv-list2" :class="{ active: index === 0 }" v-for="(noticia, index) in noticias" :key="noticia.id">
+            <div class="service-list" :style="{
               backgroundImage: `url(https://directus.i9sellz.com.br/assets/${noticia.imagem})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -132,8 +132,10 @@
                     <a href="blog.html">{{ noticia.tempo_leitura }}</a>
                   </div>
                   <h3 class="box-title">
-                    <a href="blog-details.html" class="noticia-titulo" style="height: 200px !important;">
-                      {{ noticia.titulo }}</a>
+                    <NuxtLink :to="`/noticias/${noticia.slug}`"
+                      :data-directus="setAttr({ collection: 'noticias', item: noticia.id, fields: ['titulo', 'capa'], mode: 'popover' })">
+                      {{ noticia.titulo }}
+                    </NuxtLink>
                   </h3>
                   <a href="blog-details.html" class="th-btn style4 th-radius th-icon">Ler mais
                     <i class="fa-light fa-arrow-right-long"></i>
@@ -166,16 +168,12 @@
         </div>
       </div>
 
-      <!-- Imagens lado a lado -->
       <div class="row gy-4 align-items-center text-center">
-        <!-- Imagem do Prefeito -->
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_prefeito}`" :alt="prefeitura.prefeito"
             class="img-prefeito mb-3" />
           <h3 class="box-title text-anime-style-2">{{ prefeitura.prefeito }}</h3>
         </div>
-
-        <!-- Imagem do Vice-Prefeito -->
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_vice_prefeito}`"
             :alt="prefeitura.vice_prefeito" class="img-prefeito mb-3" />
@@ -189,12 +187,39 @@
 
 
   <!-- Secretarias -->
-  <section class="project-area position-relative project-overlay overflow-hidden bg-top-center space">
+  <section class="project-area position-relative overflow-hidden bg-top-center space"
+    style="background-color: var(--theme-color);">
     <div class="container">
       <div class="title-area text-center">
-        <h2 class="sec-title text-white text-anime-style-3">Secretarias</h2>
+        <h2 class="sec-title mb-20 text-anime-style-3" style="color: white;">Secretarias</h2>
       </div>
-      <div class="slider-area">
+      <div class="team-inner team-slider-1">
+        <div class="row gy-30 justify-content-center">
+          <!-- Single Item -->
+          <div class="col-xl-3 col-md-6" v-for="secretaria in secretarias" :key="secretaria.id">
+            <div class="th-team team-box team-inner-box">
+              <div class="team-img">
+                <img :src="`https://directus.i9sellz.com.br/assets/${secretaria.foto_secretario}`" alt="Secretario"
+                  style="width: 200px; height: 200px;">
+              </div>
+              <div class="team-content">
+                <div class="media-body">
+                  <h3 class="box-title"><a href="team-guider-details.html">{{ secretaria.descricao }}</a></h3>
+                  <span class="team-desig">{{ secretaria.nome_secretario }}</span>
+                  <div class="th-social">
+                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="slider-area">
         <div class="swiper th-slider" id="projectSlider"
           data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"},"1300":{"slidesPerView":"3"}}}'>
           <div class="swiper-wrapper">
@@ -219,7 +244,7 @@
         <button data-slider-next="#projectSlider" class="slider-arrow slider-next">
           <img src="/assets/img/icon/left-arrow2.svg" alt="">
         </button>
-      </div>
+      </div> -->
     </div>
 
   </section>
@@ -426,7 +451,7 @@ onMounted(async () => {
   try {
     const res = await axios.get('/api/noticias')
     const noticias_res = await axios.get('/api/secretarias/')
-    const prefeitura_res = await axios.get('/api/entidade')
+    const prefeitura_res = await axios.get('/api/prefeitura')
 
     noticias.value = res.data
     secretarias.value = noticias_res.data
@@ -582,5 +607,4 @@ onMounted(() => {
   margin-left: auto;
   margin-right: auto;
 }
-
 </style>

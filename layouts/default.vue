@@ -1,6 +1,126 @@
 <template>
   <div>
+    <div class="th-menu-wrapper onepage-nav">
+      <div class="th-menu-area text-center">
+        <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+        <div class="mobile-logo">
+          <a href="index.html"><img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.logo}`" alt="Logo"></a>
+        </div>
+        <div class="th-mobile-menu">
+          <ul>
+            <li class="menu-item-has-children mega-menu-wrap">
+              <a class="active" href="index.html">Home</a>
+
+              <ul class="sub-menu">
+                <li><a href="index.html">Home Consulting</a></li>
+                <li><a href="home-cloud.html">Home Cloud</a></li>
+                <li><a href="home-ai-machine.html">Home Ai-Machine</a></li>
+                <li><a href="home-startup.html">Home Startup</a></li>
+                <li><a href="home-cybersecurity.html">Home Cybersecurity</a></li>
+                <li><a href="home-sass.html">SaaS Business Product</a></li>
+                <li><a href="home-tech-support.html">Tech Support Services</a></li>
+                <li><a href="home-software-development.html">Home Software-Development</a></li>
+                <li><a href="home-app-development.html">Web & App Development</a></li>
+                <li><a href="home-it-solutions.html">Home It Solutions</a></li>
+                <li><a href="home-digital-transformation.html">Home Digital Transformation</a></li>
+                <li><a href="home-data-analytics.html">Home Data Analytics & Big</a></li>
+                <li><a href="home-blockchain-fintech.html">Home Blockchain & Fintech</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">About Us</a>
+              <ul class="sub-menu">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="about2.html">About Us 2</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">Pages</a>
+              <ul class="sub-menu">
+                <li class="menu-item-has-children">
+                  <a href="#">Shop</a>
+                  <ul class="sub-menu">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="shop-details.html">Shop Details</a></li>
+                    <li><a href="cart.html">Cart Page</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                  </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="case-study.html">Case Study</a></li>
+                <li><a href="case-study-details.html">Case Study Details</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="career-details.html">Career Details</a></li>
+                <li><a href="team-guide.html">Team</a></li>
+                <li><a href="team-guider-details.html">Team Details</a></li>
+                <li><a href="faq.html">Faq Page</a></li>
+                <li><a href="price.html">Price Package</a></li>
+                <li><a href="error.html">Error Page</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">Our Services</a>
+              <ul class="sub-menu">
+                <li><a href="service.html">Services</a></li>
+                <li><a href="service-details.html">Service Details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">Projects</a>
+              <ul class="sub-menu">
+                <li><a href="project-grid.html">Project Grid</a></li>
+                <li><a href="project-details.html">Project Details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">Blog</a>
+              <ul class="sub-menu">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog-grid.html">Blog Grid</a></li>
+                <li><a href="blog-details.html">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="contact.html">Contact us</a>
+              <ul class="sub-menu">
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact-2.html">Contact Us Two</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <header class="th-header header-layout1">
+      <div class="header-top">
+        <div class="container th-container">
+          <div class="row justify-content-center justify-content-xl-between align-items-center">
+            <div class="col-auto d-none d-md-block">
+              <div class="header-links">
+                <ul>
+                  <li class="d-none d-xl-inline-block">
+                    <span>Prefeitura Municipal de Santa Inês</span>
+                  </li>
+                  <li class="d-none d-xl-inline-block"><i class="fa-regular fa-clock"></i>
+                    <span>Segunda à Sexta: 8h - 17h</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="header-right style2">
+                <div class="header-links">
+                  <ul>
+                    <li class="d-none d-md-inline-block"><a href="faq.html">Ouvidoria/SIC</a></li>
+                    <li class="d-none d-md-inline-block"><a href="contact.html">Transparência</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="sticky-wrapper">
         <!-- Main Menu Area -->
         <div class="menu-area">
@@ -278,7 +398,7 @@
     </div>
 
     <footer class="footer-wrapper bg-title footer-layout2 footer-layout5 space-top"
-      style="background-color: #0B59DB !important;">
+      style="background-color: var(--theme-color) !important;">
       <div class="widget-area">
         <div class="container">
           <div class="row justify-content-between">
@@ -382,7 +502,7 @@ const corPrincipal = ref('#C0C0C0') // Valor padrão
 
 onMounted(async () => {
   try {
-    const res = await axios.get('/api/entidade')
+    const res = await axios.get('/api/prefeitura')
     prefeitura.value = Array.isArray(res.data) ? res.data[0] : res.data
     console.log('Prefeitura:', prefeitura.value)
     await nextTick()
@@ -422,11 +542,11 @@ watchEffect(() => {
 
 // Cabeçalho inicial (resto do conteúdo)
 useHead({
-  title: 'Atek - It Business and Consulting Service',
+  title: 'Prefeitura de Santa Inês',
   meta: [
     { name: 'author', content: 'Atek' },
-    { name: 'description', content: 'Atek - It Business and Consulting Service Html Template' },
-    { name: 'keywords', content: 'Atek - It Business and Consulting Service Html Template' },
+    { name: 'description', content: 'Prefeitura de Santa Inês' },
+    { name: 'keywords', content: 'Prefeitura de Santa Inês' },
     { name: 'robots', content: 'INDEX,FOLLOW' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
     { name: 'theme-color', content: '#ffffff' }
