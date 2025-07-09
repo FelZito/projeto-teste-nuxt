@@ -19,7 +19,7 @@
           <div class="col-xxl-5">
             <div class="th-team team-grid">
               <div class="team-img m-auto text-center text-xxl-start">
-                <img src="/assets/img/team/team-details.jpg" alt="Team">
+                <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_prefeito}`" alt="Team">
               </div>
             </div>
           </div>
@@ -28,7 +28,6 @@
               <div class="team-content mb-25 d-md-flex justify-content-between">
                 <div class="media-body">
                   <h3 class="box-title"><a href="team-details.html">{{ prefeitura.prefeito }}</a></h3>
-                  <span class="team-desig">Digital Marketer</span>
                 </div>
                 <div class="th-social team-social">
                   <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
@@ -39,58 +38,8 @@
                 </div>
               </div>
               <p class="team-dsc mb-30">
-                Sem consequat mauris conubia inceptos nostra rutrum morbi sagittis pulvinar, commodo curabitur maecenas
-                fermentum magna tempus nisi ullamcorper, ante auctor magnis pretium eu lectus euismod platea.
+                {{ prefeitura.descricao_prefeito }}
               </p>
-              <div class="team-infobox mb-40">
-                <div class="row gx-0">
-                  <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="team-info-item d-sm-flex align-items-center text-center text-sm-start">
-                      <span class="team-info-icon"><i class="fa-solid fa-user"></i></span>
-                      <div class="team-info-content">
-                        <span class="team-info-subtitle">Experience</span>
-                        <h4 class="team-info-title">More Than 10 Years</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="team-info-item d-sm-flex align-items-center text-center text-sm-start">
-                      <span class="team-info-icon"><i class="fa-solid fa-envelope"></i></span>
-                      <div class="team-info-content">
-                        <span class="team-info-subtitle">Email</span>
-                        <h4 class="team-info-title">
-                          <a href="mailto:anjelina5@gmail.com">anjelina5@gmail.com</a>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="team-info-item d-sm-flex align-items-center text-center text-sm-start">
-                      <span class="team-info-icon"><i class="fa-solid fa-phone"></i></span>
-                      <div class="team-info-content">
-                        <span class="team-info-subtitle">Phone</span>
-                        <h4 class="team-info-title">
-                          <a href="tel:+2565862169581">+(256) 58621-69581</a>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="team-info-item d-sm-flex align-items-center text-center text-sm-start">
-                      <span class="team-info-icon"><i class="fa-solid fa-fax"></i></span>
-                      <div class="team-info-content">
-                        <span class="team-info-subtitle">Fax</span>
-                        <h4 class="team-info-title">
-                          <a href="tel:+2568145632">+2568145632</a>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="team-btn">
-                <a href="contact.html" class="th-btn th-icon">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
             </div>
           </div>
           <!-- <div class="col-xl-8 ps-3 ps-xl-5 pe-xl-4">
@@ -181,6 +130,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick} from 'vue'
+import axios from 'axios'
 
 const prefeitura = ref([])
 

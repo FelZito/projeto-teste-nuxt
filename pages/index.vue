@@ -88,9 +88,9 @@
                   <a href="service-details.html">{{ noticia.titulo }}</a>
                 </h4>
               </div>
-              <a href="service-details.html" class="th-btn style2">
+              <NuxtLink :to="`/noticias/${noticia.slug}`" class="th-btn style2">
                 Ler mais <i class="fa-light fa-arrow-right-long"></i>
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
@@ -172,7 +172,9 @@
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_prefeito}`" :alt="prefeitura.prefeito"
             class="img-prefeito mb-3" />
-          <h3 class="box-title text-anime-style-2">{{ prefeitura.prefeito }}</h3>
+          <h3 class="box-title text-anime-style-2">
+            {{ prefeitura.prefeito }}
+          </h3>
         </div>
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_vice_prefeito}`"
