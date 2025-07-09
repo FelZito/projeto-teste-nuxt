@@ -93,17 +93,17 @@
       </div>
     </div>
     <header class="th-header header-layout1">
-      <div class="header-top">
+      <div class="header-top" style="background-color: var(--theme-color) !important;">
         <div class="container th-container">
           <div class="row justify-content-center justify-content-xl-between align-items-center">
             <div class="col-auto d-none d-md-block">
               <div class="header-links">
                 <ul>
                   <li class="d-none d-xl-inline-block">
-                    <span>Prefeitura Municipal de Santa Inês</span>
+                    <span style="color: white;">{{ prefeitura.nome }}</span>
                   </li>
-                  <li class="d-none d-xl-inline-block"><i class="fa-regular fa-clock"></i>
-                    <span>Segunda à Sexta: 8h - 17h</span>
+                  <li class="d-none d-xl-inline-block"><i class="fa-regular fa-clock" style="color: white;"></i>
+                    <span style="color: white;">Segunda à Sexta: 8h - 17h</span>
                   </li>
                 </ul>
               </div>
@@ -112,8 +112,8 @@
               <div class="header-right style2">
                 <div class="header-links">
                   <ul>
-                    <li class="d-none d-md-inline-block"><a href="faq.html">Ouvidoria/SIC</a></li>
-                    <li class="d-none d-md-inline-block"><a href="contact.html">Transparência</a></li>
+                    <li class="d-none d-md-inline-block"><a href="faq.html" style="color: white;">Ouvidoria/SIC</a></li>
+                    <li class="d-none d-md-inline-block" style="color: white;"><a href="contact.html" style="color: white;">Transparência</a></li>
                   </ul>
                 </div>
               </div>

@@ -2668,11 +2668,15 @@ input[type=time]::-webkit-calendar-picker-indicator {
   padding-top: 40px;
   display: block;
   text-align: center;
-  background-color: var(--smoke-color);
+  background-color: var(--theme-color);
 }
 
 .th-menu-wrapper .mobile-logo svg {
-  max-width: 185px;
+  max-width: 120px;
+}
+
+.mobile-logo img {
+  width: 200px;
 }
 
 .th-menu-wrapper .th-menu-toggle {
@@ -8535,7 +8539,7 @@ ol.wp-block-rss {
   content: '';
   height: 14px;
   width: 1px;
-  background-color: #999999;
+  background-color: white;
   position: absolute;
   top: 5px;
   right: -27px;
