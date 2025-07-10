@@ -137,193 +137,19 @@
               <div class="col-auto me-xxl-auto">
                 <nav class="main-menu d-none d-xl-inline-block">
                   <ul>
-                    <li class="menu-item-has-children mega-menu-wrap">
-                      <a class="active" href="index.html">Institucional</a>
-                      <ul class="mega-menu mega-menu-content allow-natural-scroll">
-                        <li>
-                          <div class="container">
-                            <div class="row gy-4">
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/home-consulting.jpg" alt="Home One">
-                                    <div class="btn-wrap">
-                                      <a href="index.html" class="th-btn">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-consulting.html"><span>01.</span>Home
-                                      Consulting</a></h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/home-cloud.jpg" alt="Home Two">
-                                    <div class="btn-wrap">
-                                      <a href="home-cloud.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-cloud.html"><span>02.</span>Home Cloud</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/home-ai.jpg" alt="Home Three">
-                                    <div class="btn-wrap">
-                                      <a href="home-ai-machine.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-ai-machine.html"><span>03.</span>Home
-                                      Ai-Machine</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/startup.jpg" alt="Home Four">
-                                    <div class="btn-wrap">
-                                      <a href="home-startup.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-startup.html"><span>04.</span>Home
-                                      Startup</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/home-cybersecurity.jpg" alt="Home Five">
-                                    <div class="btn-wrap">
-                                      <a href="home-cybersecurity.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-cybersecurity.html"><span>05.</span>Home
-                                      Cybersecurity</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/home-sass.jpg" alt="Home Six">
-                                    <div class="btn-wrap">
-                                      <a href="home-sass.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-sass.html"><span>06.</span>SaaS Business
-                                      Product</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/home-tech-support.jpg" alt="Home Seven">
-                                    <div class="btn-wrap">
-                                      <a href="home-tech-support.html" class="th-btn ">View
-                                        Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-tech-support.html"><span>07.</span>Tech
-                                      Support Services</a></h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/software-deve.jpg" alt="Home Eight">
-                                    <div class="btn-wrap">
-                                      <a href="home-software-development.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a
-                                      href="home-software-development.html"><span>08.</span>Home
-                                      Software-Development</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/app-development.jpg" alt="Home Nine">
-                                    <div class="btn-wrap">
-                                      <a href="home-app-development.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-app-development.html"><span>09.</span>Web &
-                                      App Development</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/it-solutions.jpg" alt="Home Ten">
-                                    <div class="btn-wrap">
-                                      <a href="home-it-solutions.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-it-solutions.html"><span>10.</span>Home It
-                                      Solutions</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/digital-transformation.jpg" alt="Home Eleven">
-                                    <div class="btn-wrap">
-                                      <a href="home-digital-transformation.html" class="th-btn">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a
-                                      href="home-digital-transformation.html"><span>11.</span>Home Digital
-                                      Transformation</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/data-analytics.jpg" alt="Home Twelf">
-                                    <div class="btn-wrap">
-                                      <a href="home-data-analytics.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a href="home-data-analytics.html"><span>12.</span>Home
-                                      Data Analytics & Big</a>
-                                  </h3>
-                                </div>
-                              </div>
-                              <div class="col-lg-3">
-                                <div class="mega-menu-box">
-                                  <div class="mega-menu-img">
-                                    <img src="/assets/img/pages/blockchain-fintech.jpg" alt="Home ten">
-                                    <div class="btn-wrap">
-                                      <a href="home-blockchain-fintech.html" class="th-btn ">View Demo</a>
-                                    </div>
-                                  </div>
-                                  <h3 class="mega-menu-title"><a
-                                      href="home-blockchain-fintech.html"><span>13.</span>Home
-                                      Blockchain & Fintech</a>
-                                  </h3>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Institucional</a>
+                      <ul class="sub-menu">
+                        <li><a href="/prefeitura">A Prefeitura</a></li>
+                        <li><a href="/prefeitura/prefeito">Prefeito</a></li>
+                        <li><a href="/prefeitura/prefeito">Vice-Prefeito</a></li>
                       </ul>
                     </li>
-                    <li class="menu-item-has-children">
+                    <li class="menu-item">
                       <a href="#">Secretarias</a>
-                      <ul class="sub-menu">
-                        <li><a href="about.html">About Us 1</a></li>
-                        <li><a href="about2.html">About Us 2</a></li>
-                      </ul>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/carta-de-servico">Carta de Serviço</a>
                     </li>
                     <li class="menu-item-has-children">
                       <a href="#">Transparência</a>
@@ -382,6 +208,7 @@
         </div>
       </div>
     </header>
+
     <NuxtPage />
 
     <div class="space-bottom space-top">

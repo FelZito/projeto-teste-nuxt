@@ -172,14 +172,16 @@
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_prefeito}`" :alt="prefeitura.prefeito"
             class="img-prefeito mb-3" />
-          <h3 class="box-title text-anime-style-2">
-            {{ prefeitura.prefeito }}
-          </h3>
+          <a href="/prefeitura/prefeito/" class="box-title text-anime-style-2">
+            {{ prefeitura.prefeito }} <br> Prefeito
+          </a>
         </div>
         <div class="col-lg-6">
           <img :src="`https://directus.i9sellz.com.br/assets/${prefeitura.foto_vice_prefeito}`"
             :alt="prefeitura.vice_prefeito" class="img-prefeito mb-3" />
-          <h3 class="box-title text-anime-style-2">{{ prefeitura.vice_prefeito }}</h3>
+          <a href="/prefeitura/prefeito/" class="box-title text-anime-style-2">
+            {{ prefeitura.vice_prefeito }} <br> Vice-Prefeito
+          </a>
         </div>
       </div>
     </div>
