@@ -30,14 +30,21 @@
                             <div class="recent-post-wrap">
                                 <div class="recent-post" v-for="item in noticias" :key="item.id">
                                     <div class="media-img">
-                                        <a href="blog-details.html"><img :src="`https://directus.i9sellz.com.br/assets/${item.imagem}`"
-                                                alt="Blog Image" style="width: 85px; height: 85px;"></a>
+                                        <NuxtLink :to="`/noticias/${item.slug}`">
+                                            <img :src="`https://directus.i9sellz.com.br/assets/${item.imagem}`"
+                                                alt="Blog Image" style="width: 85px; height: 85px;" />
+                                        </NuxtLink>
+                                        
                                     </div>
                                     <div class="media-body">
                                         <div class="recent-post-meta">
                                             <a href="blog.html"><i class="fa-solid fa-calendar-days" style="font-size: 12px;"></i>{{ formatarData(noticia.date_created) }}</a>
                                         </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html" style="font-size: 14px;">{{ item.titulo }}</a></h4>
+                                        <h4 class="post-title">
+                                            <NuxtLink :to="`/noticias/${item.slug}`" style="font-size: 14px;">
+                                                {{ item.titulo }}
+                                            </NuxtLink>
+                                        </h4>
                                     </div>
                                 </div>
                             </div>
