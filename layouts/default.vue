@@ -1,4 +1,12 @@
 <template>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
   <div>
     <div class="th-menu-wrapper onepage-nav">
       <div class="th-menu-area text-center">
@@ -113,7 +121,8 @@
                 <div class="header-links">
                   <ul>
                     <li class="d-none d-md-inline-block"><a href="faq.html" style="color: white;">Ouvidoria/SIC</a></li>
-                    <li class="d-none d-md-inline-block" style="color: white;"><a href="contact.html" style="color: white;">Transparência</a></li>
+                    <li class="d-none d-md-inline-block" style="color: white;"><a href="contact.html"
+                        style="color: white;">Transparência</a></li>
                   </ul>
                 </div>
               </div>
@@ -146,7 +155,7 @@
                       </ul>
                     </li>
                     <li class="menu-item">
-                      <a href="#">Secretarias</a>
+                      <a href="/secretarias">Secretarias</a>
                     </li>
                     <li class="menu-item">
                       <a href="/carta-de-servico">Carta de Serviço</a>
@@ -349,6 +358,20 @@ onMounted(async () => {
   }
 })
 
+onMounted(() => {
+  if (process.client) {
+    const initVLibras = () => {
+      if (window.VLibras) {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      } else {
+        // Tenta novamente depois de um tempo se não carregou ainda
+        setTimeout(initVLibras, 500);
+      }
+    };
+    initVLibras();
+  }
+});
+
 // Atualiza o <head> dinamicamente com a cor quando `corPrincipal` mudar
 watchEffect(() => {
   useHead({
@@ -409,7 +432,11 @@ useHead({
     { src: '/assets/js/ScrollTrigger.min.js', body: true },
     { src: '/assets/js/SplitText.js', body: true },
     { src: '/assets/js/lenis.min.js', body: true },
-    { src: '/assets/js/main.js', body: true }
+    { src: '/assets/js/main.js', body: true },
+    {
+      src: 'https://vlibras.gov.br/app/vlibras-plugin.js',
+      body: true
+    }
   ]
 })
 </script>
